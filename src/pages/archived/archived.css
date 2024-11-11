@@ -1,0 +1,230 @@
+/* General Layout */
+.profile-container {
+    display: flex;
+    justify-content: space-between;  /* Space between left and right sections */
+    padding: 40px;
+   
+  }
+  
+  /* Left Sidebar - Why hire me section */
+  .sidebar {
+    flex-basis: 30%;  /* Take 40% of the page width */
+    display: flex;
+    flex-direction: column;
+    margin: 40px;  /* Add space between sidebar and content */
+    margin-top: 80px;
+  }
+  
+  .title {
+    margin-bottom: 20px;
+    font-size: var(--big-font-size);
+    font-weight: var(--weight-800);
+    text-align: center;
+  }
+
+  .title span {
+    color: var(--first-color);
+}
+  
+  .paragraph {
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    margin-bottom: 30px;
+  }
+  
+  .tab button {
+    width: 80%;
+    background-color: var(--container-color);;
+    color:var(--title-color);
+    padding: 12px 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: var(--small-font-size);
+    margin-left: 25px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+  }
+
+  .tab button:hover{
+    background-color: var(--first-color);
+    color: var(--text-white);
+
+  }
+  
+  .tab button.active {
+    background-color:var(--first-color);
+    color: var(--text-white);
+  }
+  
+  /* Right Main Content - My experience section */
+  .content {
+    flex-basis: 70%;  
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-right: 60px;
+  }
+  
+  .section-title {
+    font-size: var(--h3-font-size);
+    color: var(--title-color) !important;
+    margin-bottom: 10px;
+  }
+  
+  .section-paragraph {
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+  
+  /* Scrollable Experience Details */
+  .scrollable-content {
+    overflow-y: auto;  /* Scrollable content */
+    max-height: 360px; 
+    max-width: 850px;
+    padding-right: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+  }
+  
+  .scrollable-content::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollable-content::-webkit-scrollbar-thumb {
+    background-color:var(--first-color);
+    border-radius: 10px;
+  }
+  
+  /* Experience Grid Layout */
+  .e-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Two columns */
+    gap: 20px;  /* Space between cards */
+    
+  }
+  
+  /* Experience Card Design */
+  .e-card {
+    background-color: var(--container-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  }
+  
+  .e-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .e-year {
+    font-size: var(--smaller-font-size);
+    color: var(--first-color);
+    margin-bottom: 10px;
+  }
+  
+  .e-title {
+    font-size: var(--larger-font-size);
+    color:var(--title-color) ;
+    margin-bottom: 8px;
+  }
+  
+  .e-desc {
+    font-size: var(--smaller-font-size);
+    color:  var(--text-color);
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+  }
+
+  .para__name {
+    color: var(--text-black); 
+    background-color: var(--text-white);   
+    font-size: var( --smaller-font-size);       
+    margin: 2px;           
+  }
+
+/* Container for skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns for four icons */
+  gap: 25px 1px; /* Space between icons */
+  
+}
+
+/* Skill icon container */
+.skill-icon {
+  width: 100px; /* Make it responsive */
+  height: 100px;
+  background-color: var(--icon-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Icon inside the skill-icon container */
+.skill-icon svg, .skill-icon i {
+  font-size: 3rem;
+  color: var(--text-white);
+  transition: color 0.03s ease;
+}
+
+/* Hover effect */
+
+.skill-icon:hover svg, .skill-icon:hover i {
+  color: var(--first-color);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .skills-grid {
+      grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+      grid-template-columns: 1fr; /* Stack icons in a single column on very small screens */
+  }
+}
+
+  
+  /* Fallback for Older Browsers: Using ::before */
+  .e-desc li::before {
+    content: "•";  /* Custom bullet point */
+    color: var(--first-color);  /* Set the custom color for bullet points */
+    font-weight: bold;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Extra styling for small screens */
+  @media (max-width: 768px) {
+    .profile-container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      flex-basis: 100%;
+      padding-right: 0;
+    }
+  
+    .content {
+      flex-basis: 100%;
+      margin-left: 25px;
+      text-align: center;
+    }
+  
+    .e-grid {
+      grid-template-columns: 1fr;  /* Stack experience cards on smaller screens */
+    }
+  }
+  

@@ -1,0 +1,149 @@
+.shapes {
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .shape{
+    position: absolute;
+  }
+  
+  .s1{
+    left: 38%;
+    top: 38%;
+    animation: rotate 4s infinite linear;
+  }/*yellow near image*/
+  
+  .s2{
+    left: 3.2%;
+    top: 8%;
+    animation: rotate 4s infinite linear;
+  }/*left corner triangle*/
+  
+  .s3{
+    left: 34%;
+    bottom: 30%;
+    animation: bounce 2s infinite ease-in-out;
+  }/*light blue near image*/
+  
+  .s4{
+    left: 2%;
+    bottom: 10%;
+    animation: bounce 2.5s infinite ease-in-out;
+  }/*yellow line left corner*/
+  
+  .s5{
+    left: 44%;
+    top: 10%;
+    animation: bounce 2.5s infinite ease-in-out;
+  } /*blue line*/
+  
+  .s6{
+    left: 50%;
+    bottom: 10%;
+    animation: rotate 4s infinite linear;
+  } /*pink*/
+  
+  .s7{
+    top: 20%;
+    right: 25%;
+    animation: rotate 4s infinite linear;
+  }/*yellow triangle*/
+  
+  .s8{
+    right: 24%;
+    bottom: 20%;
+    animation: rotate 4s infinite linear;
+  }/*purple line bottom*/
+  
+  .s9{
+    right: 2%;
+    top: 10%;
+    animation: bounce 2.5s infinite ease-in-out;
+  }/*purple top right corner*/
+  
+  .s10{
+    top: 41%;
+    right: 7%;
+    animation: rotate 4s infinite linear;
+  } /*light blue right side*/
+  
+  .s11{
+    bottom: 10%;
+    right: 10%;
+    animation: bounce 2.5s infinite ease-in-out;
+  }/*yellow bottom*/
+
+  @media screen and (max-width: 1024px) {
+    .s10 {
+        top: 55%;
+        right: 8%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .s3 {
+        top: 30%;
+        left: 20%;
+    }
+
+    .s8{
+        right: 25%;
+        bottom: 2%;
+    }
+
+    .s6{
+        left: 15%;
+        top: 60%;
+      } 
+}
+
+/* Extra small screens */
+@media screen and (max-width: 576px) {
+
+    .s11{
+        bottom: 8%;
+      }
+}
+
+@media screen and (max-width: 450px) {
+    .s6, .s11 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .s3,s1,s10 {
+       display: none;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes scale {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  

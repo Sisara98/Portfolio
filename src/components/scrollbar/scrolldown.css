@@ -1,0 +1,50 @@
+.scroll__down {
+    position: fixed; /* Change to fixed */
+    bottom: 2.5rem;
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust to center */
+    width: auto; /* Adjust as needed */
+    z-index: 10; /* Ensure it stays above other elements */
+}
+
+
+.home__scroll-name{
+    font-size: var(--small-font-size);
+}
+
+.mouse{
+    border: 2px solid #454360;
+    display: block;
+    height: 1.6rem;
+    width: 1.25rem;
+    margin: auto;
+    margin-top: 0.75rem;
+    border-radius: relative;
+}
+
+@keyframes ani-mouse{
+    0%{
+        top:29%
+    }
+    15%{
+        top:50%
+    }
+    50%{
+        top:50%
+    }
+    100%{
+        top:29%
+    }
+}
+
+.wheel{
+    background-color: var(--title-color);
+    border-radius: 100%;
+    width: 0.25rem;
+    height: 0.25rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translate(-50%);
+    animation: ani-mouse 2s linear infinite;
+}

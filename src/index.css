@@ -294,8 +294,12 @@
 }
 
 @media screen and (max-width: 450px){
-    .home__img{
-        display: none;
+
+    .home__img {
+        display: block; /* Ensure it's visible */
+        width: 150px;
+        height: 150px;
+        border-radius: 50%; /* Keep it circular if desired */
     }
 
     .home__content{
@@ -320,18 +324,43 @@
         margin-bottom: 4px;
     }
 
-    .about__img{
-        padding: 15px 15px 25px 20px;
+    .button__download, .button__hire {
+        width: 100%;
+        align-items: center;
+    }
+
+    .about_img {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 0px;
     }
 
 }
 
 @media screen and (max-width: 350px){
+
+    .home__img {
+        width: 100px; /* Further adjust for very small screens */
+        height: 100px;
+    }
+
     .home__title span{
         display: inline;
+    } 
+
+    .about_img {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 45px;
     }
 
 }
 
+@media screen and (max-width: 350px){
 
+ .home__img {
+       display: none;
+    }
 
+}

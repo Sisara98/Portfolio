@@ -4,7 +4,7 @@ import './archived.css';
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent} from '@radix-ui/react-tooltip';
 
 const Archived = () => {
-  const [activeTab, setActiveTab] = useState('certificates');
+  const [activeTab, setActiveTab] = useState('skills');
 
   const renderContent = () => {
     switch (activeTab) {
